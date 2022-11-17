@@ -44,7 +44,7 @@ export default {
 <style lang="scss" scoped>
 .select-cast {
   width: 15%;
-  margin-top: 30px;
+  margin: 30px 0px;
 }
 .mc-container {
   padding: 20px;
