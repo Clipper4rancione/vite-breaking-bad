@@ -1,6 +1,9 @@
 <script>
 export default {
   name: "AppHeader",
+  props: {
+    title: String,
+  },
 };
 </script>
 
@@ -8,9 +11,9 @@ export default {
   <header>
     <div class="container d-flex align-items-center">
       <div class="logo">
-        <img src="/public/Breaking_Bad_logo.svg" alt="" />
+        <img src="/Breaking_Bad_logo.svg" alt="" />
       </div>
-      <h1>Breaking Bad API Cast</h1>
+      <h1>{{ title }}</h1>
     </div>
   </header>
 </template>
@@ -29,6 +32,7 @@ img {
 }
 h1 {
   color: white;
+  font-weight: 700;
   margin-left: 50px;
 }
 </style>
