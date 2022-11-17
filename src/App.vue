@@ -1,6 +1,6 @@
 <script>
 import axios from "axios";
-import store from "./data/store";
+import { store } from "./data/store";
 
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
@@ -21,7 +21,8 @@ export default {
       axios
         .get(store.apiUrlBrBa)
         .then((result) => {
-          console.log(result.data);
+          store.castList = result.data;
+          console.log(store.castList);
         })
         .catch((error) => {
           console.log(error);
