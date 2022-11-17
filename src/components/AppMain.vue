@@ -24,7 +24,7 @@ export default {
       </select>
     </div>
     <div class="container mc-container">
-      <div class="founded">
+      <div class="founded p-3 text-center">
         <h3>Sono stati trovati {{ store.castList.length }} attori</h3>
       </div>
       <div class="container w-100">
