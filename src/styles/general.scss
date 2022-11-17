@@ -1,0 +1,14 @@
+@use './partials/_vars' as *;
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/@fontsource/montserrat/index.css';
+
+body {
+    font-family: $main-font;
+    background-color: $body-color;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
