@@ -18,15 +18,17 @@ export default {
   },
   methods: {
     getCharacters() {
-      axios
-        .get(store.apiUrlBrBa)
-        .then((result) => {
-          store.castList = result.data;
-          console.log(store.castList);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+     axios.get(store.apiUrlBrBa, {
+      params:{
+        category: store.categorySwap
+      }
+     })
+     .then( result => {
+      store.castList = result.data;
+     })
+     .catch( error => {
+      console.log(error);
+     })
     },
   },
   mounted() {
@@ -37,7 +39,7 @@ export default {
 <template>
   <AppHeader title="Breaking Bad API App" />
   <main>
-    <AppMain />
+    <AppMain @startFilter="getCharacters()"/>
   </main>
 </template>
 
