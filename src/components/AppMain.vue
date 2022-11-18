@@ -16,11 +16,11 @@ export default {
 
 <template>
   <div class="container">
-    <div class="select-cast">
-      <select class="form-select">
-        <option selected>Breaking Bad</option>
-        <option value="1">Better Call Saul</option>
-        <option value="2">El Camino</option>
+    <div class="select-cast d-flex">
+      <select v-model="store.categorySwap" class="form-select">
+        <option @click="$emit('startFilter')" value="" selected>Select category</option>
+        <option @click="$emit('startFilter')" value="Breaking Bad">Breaking Bad</option>
+        <option @click="$emit('startFilter')" value="Better Call Saul">Better Call Saul</option>
       </select>
     </div>
     <div class="container mc-container">
